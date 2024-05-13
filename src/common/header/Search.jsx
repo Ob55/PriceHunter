@@ -39,3 +39,5 @@ const Search = ({ CartItem }) => {
 }
 
 export default Search
+
+git add .
