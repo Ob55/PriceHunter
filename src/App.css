@@ -75,7 +75,7 @@ button {
 }
 .category {
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
-  background-color: #fff;
+  background-color: #dbaf0f;
   width: 23%;
   height: 510px;
   padding: 15px 0;
@@ -97,7 +97,7 @@ button {
   padding: 0 20px;
 }
 .category .box:hover {
-  background-color: #ffe1e6;
+  background-color: #fa6a82;
   cursor: pointer;
 }
 
@@ -106,7 +106,7 @@ button {
   background: #e94560;
   padding: 13px 40px;
   font-weight: bold;
-  color: #fff;
+  color: #170303;
   border-radius: 5px;
 }
 .top {
@@ -127,12 +127,12 @@ button {
   padding: 3px 10px;
   font-size: 12px;
   border-radius: 50px;
-  color: #fff;
+  color: #1d0404;
   margin: 10px;
 }
 /*---------product-----------*/
 .product {
-  background: #fff;
+  background: #f5f553;
   padding: 20px;
   position: relative;
   border-radius: 8px;
@@ -145,7 +145,7 @@ button {
 }
 .product .rate i {
   font-size: 15px;
-  color: #ffcd4e;
+  color: #e8680c;
   margin: 5px 5px 5px 0;
 }
 .product .price {

@@ -6,7 +6,7 @@ const Head = () => {
       <section className='head'>
         <div className='container d_flex'>
           <div className='left row'>
-            <i className='fa fa-phone'></i>
+            <i className=''></i>
             <label> +254 736 567 890</label>
             <i className='fa fa-envelope'></i>
             <label> support@JonothanKutumbs@gmail.com</label>
