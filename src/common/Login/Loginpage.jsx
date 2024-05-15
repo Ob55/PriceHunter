@@ -23,10 +23,10 @@ const Login = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === "email") {
-      const isValidEmail = value.includes("@");
+      const isValidEmail = value.includes("@gmail.com");
       setEmail(value);
       if (!isValidEmail) {
-        setEmailError("Email must contain '@'");
+        setEmailError("Email must contain '@gmail.com'");
       } else {
         setEmailError("");
       }
