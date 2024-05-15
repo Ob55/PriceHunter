@@ -1,13 +1,13 @@
-import React from "react"
-import logo from "../../components/assets/images/logo.svg"
-import { Link } from "react-router-dom"
+import React from "react";
+import logo from "../../components/assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Search = ({ CartItem }) => {
   // fixed Header
   window.addEventListener("scroll", function () {
-    const search = document.querySelector(".search")
-    search.classList.toggle("active", window.scrollY > 100)
-  })
+    const search = document.querySelector(".search");
+    search.classList.toggle("active", window.scrollY > 100);
+  });
 
   return (
     <>
@@ -24,7 +24,10 @@ const Search = ({ CartItem }) => {
           </div>
 
           <div className='icon f_flex width'>
-            <i className='fa fa-user icon-circle'></i>
+            <Link to="/login"> {/* Wrap the user icon inside a Link component */}
+              <i className='fa fa-user icon-circle'>
+              </i>
+            </Link>
             <div className='cart'>
               <Link to='/cart'>
                 <i className='fa fa-shopping-bag icon-circle'></i>
@@ -35,7 +38,7 @@ const Search = ({ CartItem }) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

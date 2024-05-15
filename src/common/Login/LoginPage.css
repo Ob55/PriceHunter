@@ -1,0 +1,72 @@
+.login-items {
+  background: #091b2e;
+  height: auto;
+  padding: 150px 0;
+}
+
+.login-items .container {
+  display: flex;
+}
+
+.login-items .cart-details {
+  width: 80%;
+}
+
+.login-items .cart-details h3 {
+  margin-left: 800px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0px;
+  color: #ffffff; /* Change text color to white */
+}
+
+.login-items .form-group {
+  margin-left: 520px;
+  margin-bottom: 20px;
+}
+
+.login-items .form-group label {
+  font-size: 16px;
+  color: #ffffff; /* Change label text color to white */
+}
+
+.login-items .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #ffffff; /* Change input background color to white */
+  color: #000000; /* Change input text color to black */
+}
+
+.login-items .form-group input::placeholder {
+  color: #999999; /* Change placeholder text color to light gray */
+}
+
+.login-items .form-group input:focus {
+  outline: none;
+  border-color: #40d803; /* Change border color on focus */
+}
+button {
+  background-color: #0f2af7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 90%;
+}
+
+button:hover {
+  background-color: #f4f41b;
+}
+p {
+  font-size: 20px; /* Adjust the font size as needed */
+  color: #40d803;
+}
