@@ -8,16 +8,13 @@
   display: flex;
 }
 
-.login-items .cart-details {
-  width: 80%;
-}
 
 .login-items .cart-details h3 {
   margin-left: 800px;
   font-size: 20px;
   font-weight: 500;
   margin-top: 0px;
-  color: #ffffff; /* Change text color to white */
+  color: #ffffff; 
 }
 
 .login-items .form-group {
@@ -27,7 +24,7 @@
 
 .login-items .form-group label {
   font-size: 16px;
-  color: #ffffff; /* Change label text color to white */
+  color: #ffffff; 
 }
 
 .login-items .form-group input {
@@ -48,11 +45,11 @@
   outline: none;
   border-color: #40d803; /* Change border color on focus */
 }
-button {
-  background-color: #0f2af7; /* Green */
+.brian {
+  background-color: #eaebf7; 
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -60,7 +57,7 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  margin-left: 90%;
+  margin-left: 45%;
 }
 
 button:hover {
