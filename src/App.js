@@ -8,6 +8,8 @@ import Cart from "./common/Cart/Cart";
 import Footer from "./common/footer/Footer";
 import Sdata from "./components/shops/Sdata";
 import Login from "./common/Login/Loginpage"; // Import the Login component
+import SearchResult from "./common/SearchResult/SearchResult";
+import "./common/SearchResult/SearchResult.css"; // Import SearchResult.css
 
 function App() {
   const { productItems } = Data;
@@ -46,6 +48,9 @@ function App() {
           </Route>
           <Route path="/login" exact>
             <Login /> {/* Render the Login component */}
+          </Route>
+          <Route path="/search-results" exact>
+            <SearchResult /> {/* Render the SearchResult component */}
           </Route>
         </Switch>
         <Footer />

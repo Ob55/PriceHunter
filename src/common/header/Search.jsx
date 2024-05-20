@@ -1,43 +1,51 @@
-import React from "react";
-import logo from "../../components/assets/images/logo.svg";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import logo from '../../components/assets/images/logo.svg';
 
-const Search = ({ CartItem }) => {
-  // fixed Header
-  window.addEventListener("scroll", function () {
-    const search = document.querySelector(".search");
-    search.classList.toggle("active", window.scrollY > 100);
-  });
+const Search = () => {
+  const [query, setQuery] = useState('');
+  const history = useHistory();
+
+  const handleSearch = () => {
+    // Navigate to search results page with query params
+    history.push(`/search-results?query=${encodeURIComponent(query)}`);
+  };
 
   return (
-    <>
-      <section className='search'>
-        <div className='container c_flex'>
-          <div className='logo width '>
-            <img src={logo} alt='' />
-          </div>
+    <section className='search'>
+      <div className='container c_flex'>
+        <div className='logo width '>
+          <img src={logo} alt='' />
+        </div>
 
-          <div className='search-box f_flex'>
-            <i className='fa fa-search'></i>
-            <input type='text' placeholder='Search and hit enter...' />
-            <span>All Category</span>
-          </div>
+        <div className='search-box f_flex'>
+          <i className='fa fa-search'></i>
+          <input
+            type='text'
+            placeholder='Search and hit enter...'
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') handleSearch();
+            }}
+          />
+          <span>All Category</span>
+        </div>
 
-          <div className='icon f_flex width'>
-            <Link to="/login"> {/* Wrap the user icon inside a Link component */}
-              <i className='fa fa-user icon-circle'>
-              </i>
+        <div className='icon f_flex width'>
+          <Link to='/login'>
+            {/* Wrap the user icon inside a Link component */}
+            <i className='fa fa-user icon-circle'></i>
+          </Link>
+          <div className='cart'>
+            <Link to='/cart'>
+              <i className='fa fa-shopping-bag icon-circle'></i>
+              <span>0</span> {/* Set initial value to 0 */}
             </Link>
-            <div className='cart'>
-              <Link to='/cart'>
-                <i className='fa fa-shopping-bag icon-circle'></i>
-                <span>{CartItem.length === 0 ? "" : CartItem.length}</span>
-              </Link>
-            </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

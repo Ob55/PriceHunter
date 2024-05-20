@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./LoginPage.css";
 
 const Login = () => {
@@ -10,13 +11,19 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [fillError, setFillError] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false); // State to manage success message visibility
+  const history = useHistory();
 
   const handleLogin = () => {
     if (!username || !email || !phoneNumber || !password || emailError || passwordError) {
-      setFillError(true); // Set fill error to true if any field is empty or has an error
+      setFillError(true);
     } else {
-      // Perform any other login logic here
-      setLoggedIn(true); // Set loggedIn to true only when there are no errors
+      setLoggedIn(true);
+      setShowSuccessMessage(true); // Show success message on successful login
+      setTimeout(() => {
+        setShowSuccessMessage(false); // Hide success message after 3 seconds
+        history.push("/");
+      }, 3000); // Hide message after 3 seconds
     }
   };
 
@@ -99,10 +106,10 @@ const Login = () => {
               {passwordError && <p className="error">{passwordError}</p>}
             </div>
             {fillError && <p className="error">Please fill in all required fields</p>}
-            <div class="brian">
-            <button  onClick={handleLogin}>Submit</button>
+            {showSuccessMessage && <p className="success">Logged in Successfully</p>} {/* Show success message */}
+            <div className="brian">
+              <button onClick={handleLogin}>Submit</button>
             </div>
-            {loggedIn && <p>Logged in Successful</p>}
           </div>
         </div>
       </section>

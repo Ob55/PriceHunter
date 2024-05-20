@@ -1,0 +1,16 @@
+.search-results ul {
+  list-style: none;
+  padding: 10px;
+  display: flex; /* Align items in a row */
+  flex-wrap: wrap; /* Wrap items to the next line if needed */
+}
+
+.search-results li {
+  margin-right: 5%; /* Add some spacing between items */
+  margin-bottom: 20px;
+}
+
+.search-results img {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+}

@@ -1,20 +1,20 @@
 .login-items {
-  background: #091b2e;
+  background-image: url("/loginBackground.jpeg");
   height: auto;
-  padding: 150px 0;
+  padding: 100px;
 }
 
 .login-items .container {
   display: flex;
 }
 
-
 .login-items .cart-details h3 {
   margin-left: 800px;
   font-size: 20px;
   font-weight: 500;
   margin-top: 0px;
-  color: #ffffff; 
+  color: #f6f5f5; 
+  animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
 }
 
 .login-items .form-group {
@@ -24,17 +24,20 @@
 
 .login-items .form-group label {
   font-size: 16px;
-  color: #ffffff; 
+  color: white; 
+  animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
 }
 
 .login-items .form-group input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1px solid #ccc;
   background-color: #ffffff; /* Change input background color to white */
   color: #000000; /* Change input text color to black */
+  transition: border-color 0.3s, transform 0.3s; /* Smooth transition for border color and transform */
+  animation: inputFadeIn 1s ease-in-out, glowingBorder 2s infinite alternate; /* Add fade-in and glowing animations */
 }
 
 .login-items .form-group input::placeholder {
@@ -44,7 +47,38 @@
 .login-items .form-group input:focus {
   outline: none;
   border-color: #40d803; /* Change border color on focus */
+  transform: scale(1.05); /* Slightly enlarge the input field on focus */
 }
+
+/* Keyframes for the fade-in animation */
+@keyframes inputFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for the glowing border animation */
+@keyframes glowingBorder {
+  0% {
+    border-color: #40d803; /* Start with green */
+    box-shadow: 0 0 2px #40d803, 0 0 2px #40d803, 0 0 2px #40d803;
+  }
+  50% {
+    border-color: #00f2ff; /* Transition to blue */
+    box-shadow: 0 0 2px #00f2ff, 0 0 2px #00f2ff, 0 0 2px #00f2ff;
+  }
+  100% {
+    border-color: #ff40d8; /* Transition to pink */
+    box-shadow: 0 0 3px #ff40d8, 0 0 0px #ff40d8, 0 0 2px #ff40d8;
+  }
+}
+
+
 .brian {
   background-color: #eaebf7; 
   border: none;
@@ -57,13 +91,36 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  margin-left: 45%;
+  margin-left: 70%;
+  transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
-button:hover {
+.brian:hover {
   background-color: #f4f41b;
 }
+
 p {
   font-size: 20px; /* Adjust the font size as needed */
   color: #40d803;
+  animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes inputFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
