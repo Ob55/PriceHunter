@@ -1,23 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../components/assets/images/logo.svg';
 
 const Search = () => {
   const [query, setQuery] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
   const history = useHistory();
 
+  useEffect(() => {
+    const storedUsername = localStorage.getItem('username');
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+    if (isLoggedIn && storedUsername) {
+      setLoggedIn(true);
+      setUsername(storedUsername);
+    }
+  }, []);
+
   const handleSearch = () => {
-    // Navigate to search results page with query params
     history.push(`/search-results?query=${encodeURIComponent(query)}`);
   };
 
   return (
     <section className='search'>
       <div className='container c_flex'>
-        <div className='logo width '>
-          <img src={logo} alt='' />
-        </div>
-
         <div className='search-box f_flex'>
           <i className='fa fa-search'></i>
           <input
@@ -31,12 +37,16 @@ const Search = () => {
           />
           <span>All Category</span>
         </div>
-
         <div className='icon f_flex width'>
-          <Link to='/login'>
-            {/* Wrap the user icon inside a Link component */}
-            <i className='fa fa-user icon-circle'></i>
-          </Link>
+          {loggedIn ? (
+            <div className='profile-icon'>
+              {username.charAt(0).toUpperCase()}
+            </div>
+          ) : (
+            <Link to='/login'>
+              <i className='fa fa-user icon-circle'></i>
+            </Link>
+          )}
           <div className='cart'>
             <Link to='/cart'>
               <i className='fa fa-shopping-bag icon-circle'></i>

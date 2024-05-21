@@ -1,58 +1,37 @@
-import React from "react"
-import "./style.css"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./style.css";
 
 const Footer = () => {
   return (
-    <>
-      <footer>
-        <div className='container grid2'>
-          <div className='box'>
-            <h1>JonothanKutumbs</h1>
-            <p>i head worked  with  my  group</p>
-            <div className='icon d_flex'>
-              <div className='img d_flex'>
-                <i class='fa-brands fa-google-play'></i>
-                <span>Google Play</span>
-              </div>
-              <div className='img d_flex'>
-                <i class='fa-brands fa-app-store-ios'></i>
-                <span>App Store</span>
-              </div>
-            </div>
-          </div>
-
-          <div className='box'>
-            <h2>About Us</h2>
-            <ul>
-              <li>Careers</li>
-              <li>Our Stores</li>
-              <li>Our Cares</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
-          <div className='box'>
-            <h2>Customer Care</h2>
-            <ul>
-              <li>Help Center </li>
-              <li>How to Buy </li>
-              <li>Track Your Order </li>
-              <li>Corporate & Bulk Purchasing </li>
-              <li>Returns & Refunds </li>
-            </ul>
-          </div>
-          <div className='box'>
-            <h2>Contact Us</h2>
-            <ul>
-              <li>Kenya, Ngong Road, Nairobi </li>
-              <li>Email:JonothanKutumbs@gmail.com</li>
-              <li>Phone: +254 113 562 668</li>
-            </ul>
-          </div>
+    <footer>
+      <div className="footerContainer">
+        <div className="socialIcons">
+          <a href="">
+            <i className="fa-brands fa-facebook"></i>
+          </a>
+          <a href="">
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+          <a href="">
+            <i className="fa-brands fa-twitter"></i>
+          </a>
         </div>
-      </footer>
-    </>
-  )
-}
+        <div className="footerNav">
+          <ul>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li> {/* Create this route and component similarly */}
+          </ul>
+        </div>
+      </div>
+      <div className="footerBottom">
+        <p>
+          Copyright &copy;2024; Designed by <span className="designer">Price Hunter</span>
+        </p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

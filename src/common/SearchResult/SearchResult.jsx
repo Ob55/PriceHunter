@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import db from './db';
-import './SearchResult.css'; // Importing SearchResult.css for styling
+import './SearchResult.css'; 
 
 const SearchResult = () => {
   const [searchResults, setSearchResults] = useState([]);

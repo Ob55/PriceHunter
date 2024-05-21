@@ -1,6 +1,6 @@
 /*------head-----------*/
 .head {
-  background-color: #0f3460;
+  background-color: #78abea;
   padding: 10px 0;
   color: #242121;
 }
@@ -173,3 +173,18 @@ header ul li a:hover {
     height: 10vh;
   }
 }
+
+/*------profile-----------*/
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff014f;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+/*------profile-----------*/

@@ -1,5 +1,5 @@
 .login-items {
-  background-image: url("/loginBackground.jpeg");
+  
   height: auto;
   padding: 100px;
 }
@@ -13,7 +13,7 @@
   font-size: 20px;
   font-weight: 500;
   margin-top: 0px;
-  color: #f6f5f5; 
+  color: #070303; 
   animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
 }
 
@@ -24,7 +24,7 @@
 
 .login-items .form-group label {
   font-size: 16px;
-  color: white; 
+  color: rgb(19, 11, 11); 
   animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
 }
 
@@ -41,12 +41,12 @@
 }
 
 .login-items .form-group input::placeholder {
-  color: #999999; /* Change placeholder text color to light gray */
+  color: #645a5a; /* Change placeholder text color to light gray */
 }
 
 .login-items .form-group input:focus {
   outline: none;
-  border-color: #40d803; /* Change border color on focus */
+  border-color: #050604; /* Change border color on focus */
   transform: scale(1.05); /* Slightly enlarge the input field on focus */
 }
 
@@ -80,9 +80,9 @@
 
 
 .brian {
-  background-color: #eaebf7; 
+  background-color: #e2e4fa; 
   border: none;
-  color: white;
+  color: rgb(252, 238, 238);
   padding: 15px 30px;
   text-align: center;
   text-decoration: none;
