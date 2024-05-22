@@ -15,7 +15,8 @@ import UserAccount from "./common/UserAccount/UserAccount";
 import "./common/UserAccount/UserAccount.css";
 import {authorMockData } from "./MockData"
 
-//implementing the API
+//implementing the API///////////////////
+
 function App() {
   const [authors, setAuthors] = useState([])
   useEffect(() => {
@@ -29,8 +30,27 @@ function App() {
 fetchData();      
   }, [])
 const submitAuthor = async () => {
+  const myData = {
+    watch: 'https://price-backend-1.onrender.com/products',
+        "id": 113,
+    "image_url": "Fulfilled By Kilimall",
+    "name": "Large Dial Wacth Business Men's Watch Casual Men's Watch Fashion Belt Quartz Watch Male Wrist Watch",
+    "price": "KSh 379",
+    "product_stores": [],
+    "rating": "(14)",
+    "user_id": null
 }
-
+const result = await fetch('https://price-backend-1.onrender.com/products', (
+  method: 'POST',
+  headers: (
+    'Content-Type': 'application/json'
+),
+  body: JSON.stringify(myData)
+})
+  const resultInJson = await result.json()
+  console.log(resultInJson)
+}  
+  
 ///////////////////////////////////////////////////
   const App = () => {
   const { productItems } = Data;
