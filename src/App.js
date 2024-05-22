@@ -13,8 +13,26 @@ import About from "./common/footer/About";
 import "./common/SearchResult/SearchResult.css"; 
 import UserAccount from "./common/UserAccount/UserAccount";
 import "./common/UserAccount/UserAccount.css";
+import {authorMockData } from "./MockData"
 
-const App = () => {
+//implementing the API
+function App() {
+  const [authors, setAuthors] = useState([])
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch ('https://price-backend-1.onrender.com/products')
+      const jsonResult = await result.json();
+
+      setAuthors(jsonResult)
+
+},
+fetchData();      
+  }, [])
+const submitAuthor = async () => {
+}
+
+///////////////////////////////////////////////////
+  const App = () => {
   const { productItems } = Data;
   const { shopItems } = Sdata;
 
